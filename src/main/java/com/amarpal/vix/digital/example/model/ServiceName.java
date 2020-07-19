@@ -1,4 +1,4 @@
-package com.amarpal.vix.digital.test.model;
+package com.amarpal.vix.digital.example.model;
 
 public class ServiceName {
 

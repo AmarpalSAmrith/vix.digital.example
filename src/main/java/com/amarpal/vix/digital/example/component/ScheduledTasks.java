@@ -1,8 +1,8 @@
-package com.amarpal.vix.digital.test.component;
+package com.amarpal.vix.digital.example.component;
 
-import com.amarpal.vix.digital.test.model.ServiceInfo;
-import com.amarpal.vix.digital.test.service.CheckService;
-import com.amarpal.vix.digital.test.service.ServiceInfoService;
+import com.amarpal.vix.digital.example.model.ServiceInfo;
+import com.amarpal.vix.digital.example.service.CheckService;
+import com.amarpal.vix.digital.example.service.ServiceInfoService;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.LocalTime;

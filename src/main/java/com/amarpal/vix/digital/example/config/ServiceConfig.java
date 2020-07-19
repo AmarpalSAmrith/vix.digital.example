@@ -1,4 +1,4 @@
-package com.amarpal.vix.digital.test.config;
+package com.amarpal.vix.digital.example.config;
 
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;

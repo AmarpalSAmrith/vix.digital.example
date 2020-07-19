@@ -1,4 +1,4 @@
-package com.amarpal.vix.digital.test;
+package com.amarpal.vix.digital.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

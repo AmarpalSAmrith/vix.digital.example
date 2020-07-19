@@ -1,7 +1,6 @@
-package com.amarpal.vix.digital.test.service;
+package com.amarpal.vix.digital.example.service;
 
-import com.amarpal.vix.digital.test.model.ServiceInfo;
-import java.time.LocalDateTime;
+import com.amarpal.vix.digital.example.model.ServiceInfo;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.amarpal.vix.digital.test.service;
+package com.amarpal.vix.digital.example.service;
 
 import java.net.URI;
 import org.springframework.beans.factory.annotation.Autowired;
