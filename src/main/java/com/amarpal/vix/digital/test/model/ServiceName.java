@@ -6,14 +6,6 @@ public class ServiceName {
 
   private String serviceName;
 
-  public ServiceName(int id, String serviceName) {
-    this.id = id;
-    this.serviceName = serviceName;
-  }
-
-  public ServiceName() {
-  }
-
   public int getId() {
     return id;
   }

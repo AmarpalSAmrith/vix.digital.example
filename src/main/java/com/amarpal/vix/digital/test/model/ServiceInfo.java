@@ -4,21 +4,13 @@ public class ServiceInfo {
 
   private int id;
 
-  private String availability;
+  private int serviceName;
 
-  private String performance;
+  private boolean availability;
+
+  private long performance;
 
   private String quality;
-
-  public ServiceInfo() {
-  }
-
-  public ServiceInfo(int id, String availability, String performance, String quality) {
-    this.id = id;
-    this.availability = availability;
-    this.performance = performance;
-    this.quality = quality;
-  }
 
   public int getId() {
     return id;
@@ -28,19 +20,27 @@ public class ServiceInfo {
     this.id = id;
   }
 
-  public String getAvailability() {
+  public int getServiceName() {
+    return serviceName;
+  }
+
+  public void setServiceName(int serviceName) {
+    this.serviceName = serviceName;
+  }
+
+  public boolean getAvailability() {
     return availability;
   }
 
-  public void setAvailability(String availability) {
+  public void setAvailability(boolean availability) {
     this.availability = availability;
   }
 
-  public String getPerformance() {
+  public long getPerformance() {
     return performance;
   }
 
-  public void setPerformance(String performance) {
+  public void setPerformance(long performance) {
     this.performance = performance;
   }
 
