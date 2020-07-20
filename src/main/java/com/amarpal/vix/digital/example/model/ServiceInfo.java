@@ -10,7 +10,7 @@ public class ServiceInfo {
 
   private long performance;
 
-  private String quality;
+  private int quality;
 
   public int getId() {
     return id;
@@ -44,11 +44,11 @@ public class ServiceInfo {
     this.performance = performance;
   }
 
-  public String getQuality() {
+  public int getQuality() {
     return quality;
   }
 
-  public void setQuality(String quality) {
+  public void setQuality(int quality) {
     this.quality = quality;
   }
 }
