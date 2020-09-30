@@ -33,4 +33,3 @@ INSERT INTO quality_categories(id, category) VALUES (1, 'red');
 INSERT INTO quality_categories(id, category) VALUES (2, 'amber');
 
 INSERT INTO quality_categories(id, category) VALUES (3, 'green');
-
