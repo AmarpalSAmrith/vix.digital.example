@@ -24,4 +24,13 @@ public class ServiceNameService extends DatabaseService {
     );
   }
 
+  public ServiceName getService(String name) {
+    return jdbi.withHandle(handle -> handle.createQuery("SELECT id, service_name FROM service_name WHERE service_name = :name")
+            .bind("name", name)
+            .mapToBean(ServiceName.class)
+            .findFirst()
+            .orElseThrow(()-> new IllegalArgumentException("Invalid Service Name: " + name))
+    );
+  }
+
 }

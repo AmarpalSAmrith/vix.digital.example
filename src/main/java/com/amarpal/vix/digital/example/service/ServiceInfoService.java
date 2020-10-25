@@ -10,7 +10,7 @@ import java.util.*;
 public class ServiceInfoService extends DatabaseService {
 
   public void addServiceInfoEntry(ServiceInfo serviceInfo) {
-    jdbi.withHandle(handle ->
+     jdbi.withHandle(handle ->
         handle.createUpdate(
             "INSERT INTO service_info(service_name_id, availability, performance, quality_id) "
                 + "VALUES (:serviceNameId, :availability, :performance, :quality)")

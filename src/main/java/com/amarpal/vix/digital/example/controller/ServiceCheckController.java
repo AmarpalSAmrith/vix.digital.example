@@ -9,10 +9,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ServiceCheckController {
@@ -33,14 +30,18 @@ public class ServiceCheckController {
     return "This is working!";
   }
 
-  @PostMapping("/check-service")
-  public ServiceInfo checkService(@ModelAttribute ServiceName service) {
-    log.info(service.toString());
+  @PostMapping(path = "/check-service", consumes = "application/json", produces = "application/json")
+  public ServiceInfo checkService(@RequestBody() ServiceName service) {
+    log.info("Check Service: " + service.toString());
     return checkService.checkServiceInformation(service);
   }
 
-  @PostMapping("/add-service")
-  public String addService(@ModelAttribute("url") String url) {
+  @PostMapping(path="/add-service", consumes = "application/json", produces = "application/json")
+  public String addService(@ModelAttribute("url") String url){
+    String preUrl = "https://";
+    if (!url.startsWith(preUrl)) {
+      url = preUrl + url;
+    }
     serviceNameService.addService(url);
     return "Success!! " + url + " Added!";
   }

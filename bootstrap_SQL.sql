@@ -26,7 +26,7 @@ CREATE TABLE quality_categories (
 ALTER TABLE service_info ADD FOREIGN KEY (service_name_id) REFERENCES service_name(id);
 ALTER TABLE service_info ADD FOREIGN KEY (quality_id) REFERENCES quality_categories(id);
 
-INSERT INTO service_name(service_name) VALUES ('https://vix.digital');
+INSERT INTO service_name(service_name) VALUES ('https://google.com');
 
 INSERT INTO quality_categories(id, category) VALUES (1, 'red');
 
