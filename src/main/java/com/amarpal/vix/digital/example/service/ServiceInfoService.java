@@ -15,7 +15,7 @@ public class ServiceInfoService extends DatabaseService {
             "INSERT INTO service_info(service_name_id, availability, performance, quality_id) "
                 + "VALUES (:serviceNameId, :availability, :performance, :quality)")
             .bind("serviceNameId", serviceInfo.getServiceName())
-            .bind("availability", serviceInfo.getAvailability())
+            .bind("availability", serviceInfo.isAvailability())
             .bind("performance", serviceInfo.getPerformance())
             .bind("quality", serviceInfo.getQuality())
             .execute());

@@ -1,31 +1,25 @@
 package com.amarpal.vix.digital.example.model;
 
+import lombok.*;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ServiceName {
 
   private int id;
   private String serviceName;
-
-  public ServiceName() {}
+  private boolean enabled;
 
   public ServiceName(int id, String serviceName) {
     this.id = id;
     this.serviceName = serviceName;
+    this.enabled = true;
   }
 
-  public int getId() {
-    return id;
-  }
-
-  public void setId(int id) {
-    this.id = id;
-  }
-
-  public String getServiceName() {
-    return serviceName;
-  }
-
-  public void setServiceName(String serviceName) {
+  public ServiceName(String serviceName) {
     this.serviceName = serviceName;
+    this.enabled = true;
   }
 
   @Override
