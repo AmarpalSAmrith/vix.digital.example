@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 public class ServiceCheckController {
@@ -43,11 +44,9 @@ public class ServiceCheckController {
     @PostMapping(path = "/check-services", consumes = "application/json", produces = "application/json")
     public ServiceInfo[] checkServices(@RequestBody() ServiceName... services) {
         log.info("Check Service: " + Arrays.toString(services));
-        List<ServiceInfo> serviceInfoList = new ArrayList<>();
-        for (ServiceName service : services) {
-            serviceInfoList.add(checkService.checkServiceInformation(service));
-        }
-        return serviceInfoList.toArray(new ServiceInfo[0]);
+        return Arrays.stream(services)
+                .map(service -> checkService.checkServiceInformation(service))
+                .toArray(ServiceInfo[]::new);
     }
 
     @PostMapping(path = "/add-service")
